@@ -11,4 +11,4 @@ message = f"Привет, {full_name}!"
 if (age >= 30) :
     print(f"Привет {full_name} лет, \n Доступ разрешен!")
 else:
-    print(f"Привет {full_name} лет, \n Доступ запрещен!")
+    print(f"Привет {full_name} лет, \n Доступ запрещен!!!")
