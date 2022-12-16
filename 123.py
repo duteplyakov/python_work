@@ -5,3 +5,4 @@ f = open("name.txt", "r")
 
 with open("name.txt", "rt") as file:
     print("GOOD" if f"{login}" in file.read() else "BAD")
+
