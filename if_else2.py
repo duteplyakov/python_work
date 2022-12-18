@@ -9,4 +9,4 @@ if "admin" in user:
 elif user in usersAccess:
     print("Привет пользователь")
 else:
-    print("Привет странник")
+    print("Привет странник!!!")
