@@ -11,3 +11,9 @@ print (data.groupby(['ФИО', 'Тариф']).count())
 with open('outcard.txt', 'w') as f:
     dfAsString = data.to_string(header=True, index=False)
     f.write(dfAsString)
+
+print('\nВсего продажи за месяц:\n _____________________ ')
+Total = data['Выдача'].sum()
+print ("Выдача итого:",Total)
+Total = data['Активация'].sum()
+print ("Активация итого:",Total)
