@@ -17,7 +17,7 @@ full_name = f"{fist_name} {last_name}, твой возраст {now1}"
 #итог
 
 message = f"Привет, {full_name}!"
-f = open("out.txt", "a") #открываю и создаю файл для записи вывода
+f = open("../out.txt", "a") #открываю и создаю файл для записи вывода
 
 if (now1 >= 30) :
     print(f"Привет {full_name} лет, \n Доступ разрешен!")

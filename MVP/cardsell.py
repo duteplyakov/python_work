@@ -19,7 +19,7 @@
 
 from openpyxl import load_workbook
 
-wb = load_workbook('cardsell.xlsx')
+wb = load_workbook('../cardsell.xlsx')
 sheet_ranges = wb['Лист1']
 column_b = sheet_ranges['D']
 
