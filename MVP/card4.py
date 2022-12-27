@@ -18,4 +18,7 @@ Total = data['Выдача'].sum()
 print ("Выдача итого:",Total)
 Total = data['Активация'].sum()
 print ("Активация итого:",Total)
+import time
+print('Время печати отчета:' ,time.ctime())
+
 
