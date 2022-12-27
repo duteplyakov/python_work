@@ -45,7 +45,7 @@ else:
 # Колличество баллов пользователя
 user_score = correct_answers *10
 # Колличество процентов
-user_percentage = round((correct_answers / 3) * 100, 2)
+user_percentage = round((correct_answers / 3) * 100)
 print(
 
     f'Вот и всё, {name}!\n'
