@@ -53,3 +53,8 @@ print(
     f'Вы заработали  {user_score} баллов.\n'
     f'Это {user_percentage} процентов.'
 )
+
+
+# for num in range (10):
+#     result = 2 ** num
+#     print(f'{result}')
