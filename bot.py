@@ -1,4 +1,5 @@
 import random
+import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 
@@ -10,7 +11,7 @@ runes = [
     ("Ансуз", "Знание, вдохновение, речь"),
     ("Райдо", "Путь, путешествие, движение"),
     ("Кеназ", "Прояснение, креативность, факел"),
-    # добавь остальные
+    # Добавь остальные по желанию
 ]
 
 # Список карт Ленорман
@@ -20,10 +21,10 @@ lenormand = [
     ("Корабль", "Путешествие, торговля, движение вперед"),
     ("Дом", "Семья, безопасность, традиции"),
     ("Дерево", "Рост, здоровье, духовность"),
-    # добавь остальные
+    # Добавь остальные по желанию
 ]
 
-# Стартовое сообщение с кнопками
+# Стартовая команда
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [InlineKeyboardButton("Руна дня", callback_data="rune")],
@@ -44,11 +45,11 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         card = random.choice(lenormand)
         await query.edit_message_text(text=f"Карта Ленорман: {card[0]}\nЗначение: {card[1]}")
 
-# Основной запуск
+# Запуск бота
 if __name__ == '__main__':
-    TOKEN = "7759509225:AAG4KZzoULdb8kM91H38bF8q_J3-8Yk5C5k"
-
+    TOKEN = os.getenv("TOKEN")  # Получение токена из переменных окружения
     app = ApplicationBuilder().token(TOKEN).build()
+
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
 
