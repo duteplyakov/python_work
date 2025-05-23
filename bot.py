@@ -46,7 +46,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Основной запуск
 if __name__ == '__main__':
-    TOKEN = 7759509225:AAG4KZzoULdb8kM91H38bF8q_J3-8Yk5C5k
+    TOKEN = "7759509225:AAG4KZzoULdb8kM91H38bF8q_J3-8Yk5C5k"
 
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
